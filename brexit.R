@@ -98,7 +98,7 @@ odds_tel<-(chi$Telephone[2]/sum(chi$Telephone))/(chi$Telephone[1]/sum(chi$Teleph
 odds_tel
 odds_online/odds_tel
 
-# End of calculation
+# End of calculation ***
 
 brexitplot<-brexit_polls %>% ggplot(aes(enddate,spread,col=poll_type))
 brexitplot+geom_smooth(method = "loess",span=0.4)+geom_point(aes(col=poll_type))+geom_hline(yintercept = -.038)
