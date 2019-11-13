@@ -98,6 +98,8 @@ odds_tel<-(chi$Telephone[2]/sum(chi$Telephone))/(chi$Telephone[1]/sum(chi$Teleph
 odds_tel
 odds_online/odds_tel
 
+# End of calculation
+
 brexitplot<-brexit_polls %>% ggplot(aes(enddate,spread,col=poll_type))
 brexitplot+geom_smooth(method = "loess",span=0.4)+geom_point(aes(col=poll_type))+geom_hline(yintercept = -.038)
 
@@ -105,6 +107,7 @@ brexit_long <- brexit_polls %>%
   gather(vote, proportion, "remain":"undecided") %>%
   mutate(vote = factor(vote))
 
-brexit_long %>% ggplot(aes(enddate,proportion,col=vote))+geom_smooth(method="loess",span=0.3)
+long_graph<-brexit_long %>% ggplot(aes(enddate,proportion,col=vote))+geom_smooth(method="loess",span=0.3)
+long_graph
 
 # Graph mode
