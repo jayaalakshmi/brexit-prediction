@@ -110,4 +110,5 @@ brexit_long <- brexit_polls %>%
 long_graph<-brexit_long %>% ggplot(aes(enddate,proportion,col=vote))+geom_smooth(method="loess",span=0.3)
 long_graph
 
-# Graph mode test 1
+
+# Graph mode test 
